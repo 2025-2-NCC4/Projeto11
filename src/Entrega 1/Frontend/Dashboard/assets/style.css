@@ -1,0 +1,46 @@
+.MainHeader {
+    display: flex;
+    flex-direction: column;
+    grid: h;
+    width: 200px;
+    height: 150vh;
+    background-color: #002784;
+    margin-left: -0.6%;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.PicLogo {
+    width: 100px;
+    height: 100px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: center;
+    text-decoration: none;  
+    border-radius: 5px;  
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #45a049;
+}
+
+.button-link:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+.DashboardPag{
+    display: flex;
+    flex-direction: row;
+}
