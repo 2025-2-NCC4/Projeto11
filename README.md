@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://github.com/guibarioni"> Guilherme Barioni</a>, <a href="https://github.com/MuraCap4">Murilo Vieira</a>, <a href="https://github.com/marcusduquee">Marcus Duque</a>, <a href=https://github.com/lilianconde"Lilian Conde</a>,<a href=https://github.com/IuryXa>Iury Xavier</a>
+## Integrantes: <a href="https://github.com/guibarioni"> Guilherme Barioni</a>, <a href="https://github.com/MuraCap4">Murilo Vieira</a>, <a href="https://github.com/marcusduquee">Marcus Duque</a>, <a href=https://github.com/lilianconde">Lilian Conde</a>,<a href=https://github.com/IuryXa>Iury Xavier</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/eduardo-savino/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/lucymari/">Lucy Mari Tabuti</a>, <a href="https://www.linkedin.com/in/professorrodnil/">Rodnil da Silva Moreira Lisboa</a>, <a href="https://www.linkedin.com/in/mauricio-lopes-da-cunha-5630492a/">Mauricio Lopes Da Cunha</a>
 
