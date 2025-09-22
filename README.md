@@ -41,7 +41,7 @@ Inicie a dashboard a partir do arquivo app.py, usando a sua IDE de escolha.
 
 
 ## 📋 Licença/License
-<a href="github.com/2025-2-NCC4/Projeto11">PicMoney Dashboard</a> © 2025 by <a href="https://github.com/2025-2-NCC4/Projeto11">Guilherme Barioni, Iury Xavier, Lilian Conde, Marcus Duque, Murilo Vieira, Fecap</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2025-1-NCC3/Projeto17">Dashboard PicMoney</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2025-2-NCC4/Projeto11">FECAP, Guilherme Barioni, Iury Xavier, Lilian Conde, Marcus Duque, Murilo Vieira</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
 
 ## 🎓 Referências
 
