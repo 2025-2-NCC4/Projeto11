@@ -7,7 +7,7 @@ layout = html.Div(
     children=[
         html.Div(
             children=[
-                html.H2("Login", className="login-title"),  # Titulo
+                html.H2("Login", className="login-title", style={'color':'#000000'}),  # Titulo
                 html.Div(
                     children=[
                         # Input Email
@@ -25,7 +25,7 @@ layout = html.Div(
                         # Input Senha
                         html.Div(
                             children=[
-                                html.Label("Password", htmlFor="password"),
+                                html.Label("Senha", htmlFor="password"),
                                 dcc.Input(
                                     id="password",
                                     type="password",
@@ -46,6 +46,10 @@ layout = html.Div(
                                 dcc.Link("Entrar como convidado", href="/Home", className="link"),
                             ], className="links-container"
                         ),
+                        html.Div(id="login-status", className="status-message"),
+                        dcc.Location(id="urlLogin", refresh=True),
+                        dcc.Location(id="urlLoginLogado", refresh=True),
+                        dcc.Location(id="urlAtualLogin", refresh=True),
                     ], className="form-container"
                 ),
             ], className="login-card"

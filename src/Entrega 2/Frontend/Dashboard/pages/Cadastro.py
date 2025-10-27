@@ -1,6 +1,6 @@
 import dash
-from dash import html, dcc
-
+from click import style
+from dash import html, dcc, Input, Output
 
 dash.register_page(__name__, path='/Cadastro')
 
@@ -8,7 +8,7 @@ layout = html.Div(
     children=[
         html.Div(
             children=[
-                html.H2("Cadastro", className="login-title"),  # Titulo
+                html.H2("Cadastro", className="login-title", style={'color':'#000000'}),  # Titulo
                 html.Div(
                     children=[
                         # Input Nome
@@ -47,18 +47,52 @@ layout = html.Div(
                                 ),
                             ], className="input-container"
                         ),
+                        # Seleciona posisção
+                        html.Div(
+                            children=[
+                                html.Label("Posição", htmlFor="position"),
+                                dcc.RadioItems(
+                                    id="position",
+                                    options=[
+                                        {'label': 'CEO', 'value': 'CEO'},
+                                        {'label': 'CTO', 'value': 'CTO'},
+                                        {'label': 'CFO', 'value': 'CFO'},
+                                        {'label': 'Outro', 'value': 'Outro'}
+                                    ],
+                                    value='CEO',
+                                    className="radio-items"
+                                )
+                            ], className="input-container", style={'display':'flex', 'flex-direction': 'column'}
+                        ),
+                        html.Div(
+                            children=[
+                                html.Label("Qual é o seu cargo?", htmlFor="other-position"),
+                                dcc.Input(
+                                    id="other-position",
+                                    type="text",
+                                    placeholder="Digite o seu cargo",
+                                    className="input-field",
+                                    style={"display": "none"}
+                                ),
+                            ], className="input-container", id="other-position-container"
+                        ),
                         # Botão cadastrar
                         html.Button("Cadastrar-se", id="signup-button", className="login-btn"),
 
-                        # Mesagem de status
+                        # Mensagem de status
                         html.Div(id="signup-status", className="status-message"),
-                        #Voltar
+
+                        #Redireciona após cadastro
+                        dcc.Location(id="urlCadastro", refresh=True),
+                        dcc.Location(id="urlCadastroLogado", refresh=True),
+                        dcc.Location(id="urlAtualCadastro", refresh=True),
+                        # Voltar
                         html.Div(
                             children=[
                                 dcc.Link("Voltar", href="/", className="link"),
                             ], className="links-container"
                         ),
-                    ], className="form-container"
+                    ], className="form-container",
                 ),
             ], className="login-card"
         ),
