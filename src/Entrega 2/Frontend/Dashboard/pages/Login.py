@@ -39,11 +39,7 @@ layout = html.Div(
                         # Esqueci a senha e registrar-se
                         html.Div(
                             children=[
-                                dcc.Link("Esqueceu a senha?", href="/esqueci-senha", className="link"),
-                                html.Br(),
-                                dcc.Link("Registrar-se", href="/Cadastro", className="link"),
-                                html.Br(),
-                                dcc.Link("Entrar como convidado", href="/Home", className="link"),
+                                dcc.Link("Registrar-se", href="/Cadastro", className="link")
                             ], className="links-container"
                         ),
                         html.Div(id="login-status", className="status-message"),

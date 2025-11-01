@@ -5,15 +5,15 @@ const path = require('path');
 const cors = require('cors')
 const multer = require('multer');
 const fs = require('fs');
+const dotenv = require('dotenv');
 
-// Set up multer storage (optional: save to disk or keep in memory)
+dotenv.config();
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, 'uploads')); // save to /uploads directory
+        cb(null, path.join(__dirname, 'uploads')); 
     },
     filename: function (req, file, cb) {
-        // Save the file with original name (or customize)
         cb(null, file.originalname);
     }
 });
@@ -26,15 +26,15 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json({ limit: '50mb' })); // Increased body size limit
+app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Conexão MySQL
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'iury', 
-  password: 'xaviersqliury2910', 
-  database: 'dashboard',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER, 
+  password: process.env.DB_PASSWORD, 
+  database: process.env.DB_NAME,
   ssl:{
     rejectUnauthorized: false
 }

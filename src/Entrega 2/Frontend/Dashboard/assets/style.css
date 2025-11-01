@@ -135,7 +135,6 @@ body, html {
     min-width: 200vh;    
 }
 
-/*Login*/
 
 .page-container {
     display: flex;
@@ -178,6 +177,8 @@ body, html {
     border: 1px solid #ccc;
 }
 
+
+
 .login-btn {
     width: 100%;
     padding: 10px;
@@ -209,17 +210,52 @@ body, html {
 
 .card-metrica {
     background-color: #002784;
-    padding: 20px; /* Adds some space inside the card */
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a lifted effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     width: 330px;
 }
 
-/* Hover effect */
+.metricasMainCard {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+    text-align: center;
+    width: 330px;
+    height: 175px;
+}
+
+.metricasMainCard:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.metricasMainCardHome{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+    text-align: center;
+}
+
+.metricasMainCardHome:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
 .card-metrica:hover {
-    transform: scale(1.1); /* Increases size by 10% */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More intense shadow on hover */
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .kpi-box {

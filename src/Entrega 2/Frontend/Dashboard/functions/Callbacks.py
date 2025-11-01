@@ -1,5 +1,7 @@
 import base64
 import io
+import os
+import sys
 from urllib.parse import urlparse, parse_qs
 
 import dash
@@ -10,7 +12,8 @@ from flask import Flask, redirect, request, make_response
 from functions import PadronizacaoCSV
 
 #Endpoints backend
-backendURL = "http://localhost:5000"
+backendURL = "https://picmoneyback-e4gbaaexb8ayg5b8.canadacentral-01.azurewebsites.net"
+#backendURL = "http://localhost:5000"
 backendURL_cadastro = backendURL + "/cadastro"
 backendURL_login = backendURL +"/login"
 
@@ -107,13 +110,12 @@ def registrarcallbacks(app):
 
     #Callback para buscar informações para a página Home
     @app.callback(
-        Output("user-info", "children"),
-        Output("CargoCard", "children"),
-        Output("CargoCard", "href"),
+        Output("btnCargoHeader", "children"),
+        Output("btnCargoHeader", "href"),
+        Output("btnCargoHeader", "style"),
         Input("url", "pathname")
     )
     def display_user_info(pathname):
-        nome = request.cookies.get("user_nome")
         cargo = request.cookies.get("user_cargo")
         link = ""
 
@@ -124,11 +126,11 @@ def registrarcallbacks(app):
         elif cargo == "CTO":
             link = "/CTO"
         else:
-            return "Usuário não logado.", dash.no_update, "Cargo invalido"
+            return dash.no_update, "/", {'visibility': 'collapse'}
 
-        if nome and cargo:
-            return f"Olá, {nome}!", f"{cargo}", link
-        return "Usuário não logado.", dash.no_update, dash.no_update
+        if cargo:
+            return f"{cargo}", link, {'visibility': 'visible'}
+        return dash.no_update, dash.no_update, {'visibility': 'collapse'}
     #Redireciona a paǵina Cadastro para a página Home, caso o usuário esteja logado
     @app.callback(
         Output("urlCadastroLogado","href"),
@@ -185,7 +187,7 @@ def registrarcallbacks(app):
                           for col in df.columns])] +
                 [html.Tr([
                     html.Td(df.iloc[i][col],
-                            style={'padding': '5px 8px', 'text-align': 'center', 'border': '1px solid #ddd'})
+                            style={'padding': '5px 8px', 'text-align': 'center', 'border': '1px solid #ddd', 'color':'black'})
                     for col in df.columns
                 ]) for i in range(min(len(df), 5))],
                 style={
@@ -215,7 +217,7 @@ def registrarcallbacks(app):
     }),
 
     html.Div([
-        html.H4("⚙️ Configurações de Upload", style={'color': '#333', 'margin-bottom': '15px'}),
+        html.H4("⚙️ Configurações de Upload", style={'color': 'white', 'margin-bottom': '15px'}),
 
         html.Div([
             html.Label("Escolha a base:", style={'font-weight': '500'}),
@@ -254,7 +256,7 @@ def registrarcallbacks(app):
                         'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
                     ])],
                     placeholder="Selecione o mês",
-                    style={'width': '100%'}
+                    style={'width': '100%', 'color':'black'}
                 ),
             ], style={'flex': 1})
         ], style={'display': 'flex', 'gap': '10px', 'margin-bottom': '20px'}),
@@ -274,13 +276,13 @@ def registrarcallbacks(app):
             }
         ),
 
-        html.Div(id="uploadCSV", style={'margin-top': '20px', 'font-size': '14px', 'color': '#333'})
+        html.Div(id="uploadCSV", style={'margin-top': '20px', 'font-size': '14px', 'color': 'white'})
     ], className='Pagina', style={
         'background-color': '#fff',
         'border-radius': '10px',
         'padding': '25px',
         'box-shadow': '0 2px 8px rgba(0,0,0,0.1)',
-        'margin-bottom': '30px'
+        'margin-bottom': '30px',
     })
 ], style={'padding': '20px 40px', 'background-color': '#f4f6f8', 'width': '80%'})
 

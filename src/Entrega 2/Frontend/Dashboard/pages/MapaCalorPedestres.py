@@ -50,7 +50,7 @@ html.Div([
                     {"label": "Novembro", "value": 11},
                     {"label": "Dezembro", "value": 12},
                 ],
-                value=8,
+                value=7,
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
@@ -71,7 +71,7 @@ html.Div([
                     {"label": "Android", "value": "Android"},
                     {"label": "Celular", "value": "tudo"}
                 ],
-                value="tudo",
+                value="Android",
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
@@ -80,7 +80,7 @@ html.Div([
                 options=[
                     {"label": "Modelo", "value": "tudo"}
                 ],
-                value="tudo",
+                value="Realme C35",
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
@@ -92,23 +92,23 @@ html.Div([
                 {"label": "Produto", "value": "Produto"},
                 {"label": "Cupom", "value": "tudo"}
                 ],
-                value="tudo",
+                value="Cashback",
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
             dcc.Dropdown(
                 id="lojaPedestre-seletor",
                 options=[
-                {"label": "Restaurantes e Gastronomia", "value": "Restaurantes e Gastronomia"},
-                {"label": "Supermercados e Mercados Express", "value": "Supermercados e Mercados Express"},
-                {"label": "Farmácias e Drogarias", "value": "Farmácias e Drogarias"},
-                {"label": "Clubes e Centros de Convivência", "value": "Clubes e Centros de Convivência"},
-                {"label": "Lojas de Móveis e Decoração", "value": "Lojas de Móveis e Decoração"},
-                {"label": "Lojas de Roupas e Calçados", "value": "Lojas de Roupas e Calçados"},
-                {"label": "Lojas de Eletrodomésticos e Utilidades Domésticas", "value": "Lojas de Eletrodomésticos e Utilidades Domésticas"},
+                {"label": "Restaurantes", "value": "Restaurantes e Gastronomia"},
+                {"label": "Supermercados", "value": "Supermercados e Mercados Express"},
+                {"label": "Farmácias", "value": "Farmácias e Drogarias"},
+                {"label": "Clubes", "value": "Clubes e Centros de Convivência"},
+                {"label": "Lojas de Móveis", "value": "Lojas de Móveis e Decoração"},
+                {"label": "Lojas de Roupas", "value": "Lojas de Roupas e Calçados"},
+                {"label": "Eletrodomésticos", "value": "Lojas de Eletrodomésticos e Utilidades Domésticas"},
                 {"label": "Loja", "value": "tudo"}
                 ],
-                value="tudo",
+                value="Restaurantes e Gastronomia",
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
@@ -120,13 +120,13 @@ html.Div([
                 {"label": "Outro", "value": "Outro"},
                 {"label": "Sexo", "value": "tudo"}
                 ],
-                value="tudo",
+                value="Masculino",
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
     ],style={"display": "flex", "align-items": "center", "justify-content": "center", "margin-bottom": "30px"}),
             html.Div(id="mapa-container-Pedestre", className="content", style={
-            'height': '80vh',
+            'height': '100vh',
             'width': '100%'
         }),
     dcc.Location(id="redirectMapaPedestre", refresh=True),

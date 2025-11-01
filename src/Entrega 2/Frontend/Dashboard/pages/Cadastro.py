@@ -1,5 +1,4 @@
 import dash
-from click import style
 from dash import html, dcc, Input, Output
 
 dash.register_page(__name__, path='/Cadastro')
@@ -55,9 +54,7 @@ layout = html.Div(
                                     id="position",
                                     options=[
                                         {'label': 'CEO', 'value': 'CEO'},
-                                        {'label': 'CTO', 'value': 'CTO'},
-                                        {'label': 'CFO', 'value': 'CFO'},
-                                        {'label': 'Outro', 'value': 'Outro'}
+                                        {'label': 'CFO', 'value': 'CFO'}
                                     ],
                                     value='CEO',
                                     className="radio-items"

@@ -5,7 +5,8 @@ import requests
 import pandas as pd
 from dash import Output, Input, State, html
 
-backendURL = "http://localhost:5000"
+backendURL = "https://picmoneyback-e4gbaaexb8ayg5b8.canadacentral-01.azurewebsites.net"
+#backendURL = "http://localhost:5000"
 backendURLCSV = backendURL+'/get_csv'
 
 
@@ -23,7 +24,11 @@ def get_df_for_period(array, ano, mes):
 
 # Remove o ponto depois do 5000
 def safe_url(url):
-    return url.replace("5000.", "5000")
+    if backendURL == "https://picmoneyback-e4gbaaexb8ayg5b8.canadacentral-01.azurewebsites.net":
+        return url.replace(".net./", ".net/")
+    else:
+        return url.replace(":5000./", ":5000/")
+
 
 def safe_csv_url(path):
     if path.startswith("http://") or path.startswith("https://"):

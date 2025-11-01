@@ -15,8 +15,8 @@ def create_heatmap(df):
                             lon='longitude',
                             z='valor_compra',
                             radius=10,
-                            center={'lat': -23.55052, 'lon': -46.633308},  # Centro de São Paulo
-                            zoom=12,
+                            center={'lat': -23.570847, 'lon': -46.645782},  # Centro de São Paulo
+                            zoom=14,
                             mapbox_style="open-street-map")
     return fig
 
@@ -50,7 +50,7 @@ html.Div([
                     {"label": "Novembro", "value": 11},
                     {"label": "Dezembro", "value": 12},
                 ],
-                value=8,
+                value=7,
                 clearable=False,
                 style={"width": "200px", "margin-right": "20px", "height": '40px'}
             ),
@@ -103,7 +103,7 @@ html.Div([
             ),
     ],style={"display": "flex", "align-items": "center", "justify-content": "center", "margin-bottom": "30px"}),
             html.Div(id="mapa-container", className="content", style={
-            'height': '80vh',
+            'height': '100vh',
             'width': '100%'
         }),
     dcc.Location(id="redirectMapa", refresh=True),
@@ -112,7 +112,6 @@ html.Div([
     'fontFamily': 'Arial, sans-serif',
     'backgroundColor': '#f4f4f4',
     'padding': '20px',
-    'height': '100vh',
     'display': 'flex',
     'flexDirection': 'column',
     'alignItems': 'center',
