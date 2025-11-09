@@ -277,12 +277,12 @@ def registrarcallbacks(app):
         ),
 
         html.Div(id="uploadCSV", style={'margin-top': '20px', 'font-size': '14px', 'color': 'white'})
-    ], className='Pagina', style={
+    ],className="backgroundUpload", style={
         'background-color': '#fff',
         'border-radius': '10px',
         'padding': '25px',
         'box-shadow': '0 2px 8px rgba(0,0,0,0.1)',
-        'margin-bottom': '30px',
+        'margin-bottom': '30px'
     })
 ], style={'padding': '20px 40px', 'background-color': '#f4f6f8', 'width': '80%'})
 

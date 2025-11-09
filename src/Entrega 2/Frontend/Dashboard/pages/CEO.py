@@ -82,7 +82,7 @@ layout = html.Div([
 
     html.Div(id="ceo-kpi-container", className="content"),
 
-], className="Pagina", style={'width':'200vh', 'padding-top':'0'})
+], className="Pagina", style={'width':'180vh', 'padding-top':'0'})
 
 @dash.callback(
     Output("ceo-kpi-container", "children"),
@@ -136,7 +136,6 @@ def atualizar_metricas(mes, ano):
                 dcc.Link([
                     html.H3('📊 Receita Total (Total Revenue)', className="kpi-title", style={'color':'#1f77b4'}),
                     html.P('Avalia o crescimento do negócio.', className="kpi-description", style={'color':'black'}),
-                    html.P(f'R$ {formatted_receita}', className="kpi-value", id="MainKpiCeoReceita", style={'color':'black'}),
                 ], className="kpi-box", href=f"/Detalhes?kpi=receita&ano={ano}&mes={mes}", id="ReceitaTotal", style={'color':'black'}),
             ], className="metricasMainCard"),
 
@@ -169,7 +168,7 @@ def atualizar_metricas(mes, ano):
 
             html.Div([
                 dcc.Link([
-                    html.H3('💰 Tempo médio de uso', className="kpi-title", style={'color':'#9467bd'}),
+                    html.H3('🕝 Tempo médio de uso', className="kpi-title", style={'color':'#9467bd'}),
                     html.P('Tempo de uso do aplicativo PicMoney', className="kpi-description", style={'color':'black'}),
                     html.P('', className="kpi-value", id="MainKpiCeoROI", style={'color':'black'}),
                 ], className="kpi-box", href=f"/Detalhes?kpi=tempomedio&ano={ano}&mes={mes}")

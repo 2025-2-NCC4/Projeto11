@@ -9,7 +9,7 @@ dash.register_page(__name__, path='/Detalhes')
 
 layout = html.Div([
     dcc.Location(id='url-detalhes', refresh=False),  # Captura a URL
-    html.Div(id='conteudo-detalhes', className="Pagina", style={'width':'200vh'})  # Conteúdo que será atualizado
+    html.Div(id='conteudo-detalhes', className="Pagina", style={'width':'182vh'})  # Conteúdo que será atualizado
 ])
 
 def get_df_for_period(array, ano, mes):

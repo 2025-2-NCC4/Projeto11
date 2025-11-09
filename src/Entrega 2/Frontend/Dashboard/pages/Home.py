@@ -174,44 +174,44 @@ def create_layout(metrics):
             # Seção de Receita Total, Lucro e Valor Médio por Ticket
             html.Div([
                 dcc.Link([
-                    html.H2('Receita Total', style={'margin-bottom': '10px', 'color': '#000', 'text-decoration': 'none'}),
+                    html.H2('Receita Total', style={ 'color': '#000', 'text-decoration': 'none', 'font-size': '15px'}),
                     html.P(metrics["receita_total"],
                            style={'font-size': '28px', 'font-weight': 'bold', 'color': '#1f77b4',
                                     'text-decoration': 'none',
                                   'margin': '0'}),
                     html.P('Valor total das receitas no mês', style={'font-size': '14px', 'color': '#888'})
-                ], href=f"/Detalhes?kpi=receita&ano={ano}&mes={mes}", style={ 'width': '240px'
+                ], href=f"/Detalhes?kpi=receita&ano={ano}&mes={mes}", style={ 'width': '220px'
                 }, className="metricasMainCardHome"),
 
                 dcc.Link([
-                    html.H2('Lucro Líquido', style={'margin-bottom': '10px', 'color': '#000'}),
+                    html.H2('Lucro Líquido', style={ 'color': '#000', 'font-size': '15px'}),
                     html.P(metrics["lucro_total"],
                            style={'font-size': '28px', 'font-weight': 'bold', 'color': '#FF7F0E',
                                   'margin': '0'}),
                     html.P('Lucro após deduções', style={'font-size': '14px', 'color': '#888'})
                 ], href=f"/Detalhes?kpi=lucro&ano={ano}&mes={mes}", style={
-                    'width': '240px'
+                    'width': '220px'
                 }, className="metricasMainCardHome"),
 
                 dcc.Link([
-                    html.H2('Valor Médio por Ticket', style={'margin-bottom': '10px', 'color': '#000'}),
+                    html.H2('Valor Médio por Ticket', style={'color': '#000', 'font-size': '15px'}),
                     html.P(metrics["valor_medio_ticket"],
                            style={'font-size': '28px', 'font-weight': 'bold', 'color': '#FF5CFF',
                                   'margin': '0'}),
                     html.P('Valor médio por cupom no período', style={'font-size': '14px', 'color': '#888'})
                 ], href=f"/Detalhes?kpi=valorMedioTicket&ano={ano}&mes={mes}", style={
-                    'width': '240px'
+                    'width': '220px'
                 }, className="metricasMainCardHome"),
 
                 dcc.Link([
-                    html.H2('Margem Operacional', style={'margin-bottom': '10px', 'color': '#000'}),
+                    html.H2('Margem Operacional', style={'color': '#000', 'font-size': '15px'}),
                     html.P(metrics["margemop"],
                            style={'font-size': '28px', 'font-weight': 'bold', 'color': '#5CFF5C',
                                   'margin': '0'}),
                     html.P('Margem de receita que retorna a PicMoney',
                            style={'font-size': '14px', 'color': '#888'})
                 ], href=f"/Detalhes?kpi=margemOperacional&ano={ano}&mes={mes}", style={
-                    'width': '260px'
+                    'width': '220px'
                 }, className="metricasMainCardHome"),
             ], style={'display': 'flex', 'flex-direction': 'row', 'justify-content': 'space-between',
                       'flex': 1}),
@@ -239,7 +239,7 @@ def create_layout(metrics):
             })
         ], style={'display': 'flex', 'flex-direction': 'column', 'gap': '20px', 'padding': '20px'}),
         dcc.Location(id="verificarNome")
-    ], className="Pagina", style={'padding-top': '0'}, id="novaData")
+    ], className="Pagina", style={'padding-top': '0',  'width':'100vh'}, id="novaData")
 
 
 # Geração das métricas e layout

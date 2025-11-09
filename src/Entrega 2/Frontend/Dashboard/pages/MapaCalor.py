@@ -29,7 +29,7 @@ layout = html.Div([
     }),
     html.Div([
         html.Button("Massa de teste", className="login-btn", id='btnMassaTeste', style={'background-color': '#969696', 'width':'200px', 'margin-right':'20px'}),
-        html.Button("Base Pedestre", className="login-btn", id='btnBasePedestre', style={'width':'200px'}),
+        # html.Button("Base Pedestre", className="login-btn", id='btnBasePedestre', style={'width':'200px'}),
     ], style={"display": "flex", "align-items": "center", "justify-content": "center", "margin-bottom": "30px"}),
 
 
@@ -115,16 +115,16 @@ html.Div([
     'display': 'flex',
     'flexDirection': 'column',
     'alignItems': 'center',
-    'width':'200vh'
+    'min-width':'175vh'
 })
 
-@dash.callback(
-    Output("mudarMapa", "href"),
-    Input("btnBasePedestre", "n_clicks")
-)
-def mudarMapa(n_clicks):
-    if n_clicks > 0:
-        return "/mapacalorpedestres"
+# @dash.callback(
+#     Output("mudarMapa", "href"),
+#     Input("btnBasePedestre", "n_clicks")
+# )
+# def mudarMapa(n_clicks):
+#     if n_clicks > 0:
+#         return "/mapacalorpedestres"
 
 @dash.callback(
     Output("redirectMapa", "href"),

@@ -91,7 +91,8 @@ layout = html.Div(
         dcc.Location(id="urlPefilMudar", refresh=True),
         dcc.Location(id="urlLogout", refresh=True),
         dcc.Location(id="redirectPerfil", refresh=True)
-    ], className="page-container"
+    ], className="page-container", style={
+    'height' : '110vh'}
 )
 
 

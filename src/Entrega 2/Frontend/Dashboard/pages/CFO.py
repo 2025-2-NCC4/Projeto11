@@ -84,7 +84,7 @@ layout = html.Div([
     ], className="header", style={'margin-left':'25px'}),
 
     html.Div(id="cfo-kpi-container", className="content"),
-], className="Pagina", style={'width':'200vh', 'padding-top':'0'})
+], className="Pagina", style={'width':'182vh', 'padding-top':'0'})
 
 @dash.callback(
     Output("cfo-kpi-container", "children"),
@@ -151,8 +151,6 @@ def atualizar_metricas(mes, ano):
                 dcc.Link([
                     html.H3('📊 Margem de Lucro (Profit Margin)', className="kpi-title", style={'color': '#2ca02c'}),
                     html.P('Indica eficiência operacional.', className="kpi-description", style={'color': 'black'}),
-                    html.P(f'{formatted_margem}%', className="kpi-value", id="MainKpiCeoMargemLucro",
-                           style={'color': 'black'}),
                 ], className="kpi-box", href=f"/Detalhes?kpi=margem&ano={ano}&mes={mes}")
             ], className="metricasMainCard"),
         ], className="row-metrica", style={"display": "flex", "gap": "20px", "padding-bottom": "20px"}),
@@ -161,11 +159,9 @@ def atualizar_metricas(mes, ano):
 
             html.Div([
                 dcc.Link([
-                    html.H3('💰 Categorias mais lucrativas (Top Profitable Categories)', className="kpi-title",
+                    html.H3('💰 Categorias mais lucrativas', className="kpi-title",
                             style={'color': '#9467bd'}),
-                    html.P('Avalia eficácia estratégica.', className="kpi-description", style={'color': 'black'}),
-                    html.P(f'1° {categoria_nome} (R$ {categoria_valor})', className="kpi-value", id="MainKpiCeoROI",
-                           style={'color': 'black'}),
+                    html.P('Avalia eficácia estratégica.', className="kpi-description", style={'color': 'black'})
                 ], className="kpi-box", href=f"/Detalhes?kpi=categorias&ano={ano}&mes={mes}")
             ], className="metricasMainCard"),
 

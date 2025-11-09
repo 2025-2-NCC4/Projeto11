@@ -32,7 +32,7 @@ layout = html.Div([
             accept='.csv'
         ),
         dcc.Location(id="redirectUpload", refresh=True)
-    ], className='Pagina', style={'width':'200vh', 'height':'100vh'}),
+    ], className='Pagina', style={'width':'182vh', 'height':'100vh'}),
 
     html.Div(id="uploaded-layout", style={'display': 'none'}, children=[
         html.Div(id='output-data-upload', style={'color': '#ffffff'}),
