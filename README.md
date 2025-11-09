@@ -4,6 +4,8 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
+# PicDash
+
 ## Enrolados
 
 ## Integrantes: <a href="https://github.com/guibarioni"> Guilherme Barioni</a>, <a href="https://github.com/MuraCap4">Murilo Vieira</a>, <a href="https://github.com/marcusduquee">Marcus Duque</a>, <a href="https://github.com/lilianconde">Lilian Conde</a>, <a href=https://github.com/IuryXa>Iury Xavier</a>
@@ -12,8 +14,11 @@
 
 ## Descrição
 
+<p align="center">
+<img src="https://github.com/2025-2-NCC4/Projeto11/blob/main/imagens/logo.png" alt="PicDash Logo" border="0">
+</p>
 
-Dashboard interativa feita com o apoio da PicMoney, capaz de providenciar uma visão personalizada ao CEO, CTO e CFO.
+Dashboard interativa feita com o apoio da PicMoney, capaz de providenciar uma KPIs personalizada para o CEO e CFO. Com o upload de planilhas, a Dashboard além de possibilitar a visualização de métricas e gráficos interativos, também permite visualizar a localização dos cupons capturados com um mapa de calor dinâmico.
 <br><br>
 
 ## 🛠 Estrutura de pastas
